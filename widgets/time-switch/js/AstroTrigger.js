@@ -101,8 +101,8 @@
 				this.errors = ['Shift is required and must be an integer'];
 				return;
 			}
-			if (shift < -120 || shift > 120) {
-				this.errors = ['Shift must be greater than -120 and smaller than 120'];
+			if (shift < -240 || shift > 240) {
+				this.errors = ['Shift must be greater than -240 and smaller than 240'];
 				return;
 			}
 			this.errors = [];
@@ -131,7 +131,7 @@
                     	<option value="sunset">${vis.binds['time-switch'].translate('sunset')}</option>
 					</select>
 					<label for="shift">${vis.binds['time-switch'].translate('inputShiftInMinutes')}</label>
-                    <input id="shift" type="number" min="-120" max="120" step="1" required/>
+                    <input id="shift" type="number" min="-240" max="240" step="1" required/>
 				</div>
 			`;
 			return shadowRoot;

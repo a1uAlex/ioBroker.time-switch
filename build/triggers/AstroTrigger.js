@@ -12,7 +12,7 @@ let AstroTrigger = /** @class */ (() => {
             if (shiftInMinutes == null ||
                 shiftInMinutes > AstroTrigger.MAX_SHIFT ||
                 shiftInMinutes < -AstroTrigger.MAX_SHIFT) {
-                throw new Error('Shift in minutes must be in range -120 to 120.');
+                throw new Error('Shift in minutes must be in range -240 to 240.');
             }
             this.astroTime = astroTime;
             this.shiftInMinutes = shiftInMinutes;
@@ -24,7 +24,7 @@ let AstroTrigger = /** @class */ (() => {
             return this.shiftInMinutes;
         }
     }
-    AstroTrigger.MAX_SHIFT = 120;
+    AstroTrigger.MAX_SHIFT = 240;
     return AstroTrigger;
 })();
 exports.AstroTrigger = AstroTrigger;

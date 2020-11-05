@@ -160,7 +160,7 @@ describe('AstroTriggerScheduler', () => {
 				new AstroTriggerBuilder()
 					.setId('1')
 					.setAstroTime(AstroTime.Sunrise)
-					.setShift(-120)
+					.setShift(-240)
 					.setWeekdays(AllWeekdays)
 					.setAction(actionMock.object)
 					.build(),

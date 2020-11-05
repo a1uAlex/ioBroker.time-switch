@@ -145,40 +145,40 @@ describe('AstroTrigger', () => {
 			expect(have.getWeekdays()).to.deep.equal([Weekday.Monday]);
 		});
 
-		it('creates with astroTime=Sunset, shift=120, weekdays=[all]', () => {
+		it('creates with astroTime=Sunset, shift=240, weekdays=[all]', () => {
 			const have = new AstroTriggerBuilder()
 				.setId('1')
 				.setAction(actionMock)
 				.setAstroTime(AstroTime.Sunset)
-				.setShift(120)
+				.setShift(240)
 				.setWeekdays(AllWeekdays)
 				.build();
 			expect(have.getId()).to.equal('1');
 			expect(have.getAction()).to.equal(actionMock);
 			expect(have.getAstroTime()).to.equal(AstroTime.Sunset);
-			expect(have.getShiftInMinutes()).to.equal(120);
+			expect(have.getShiftInMinutes()).to.equal(240);
 			expect(have.getWeekdays()).to.deep.equal(AllWeekdays);
 		});
 
-		it('creates with astroTime=SolarNoon, shift=-120, weekdays=[Monday, Wednesday, Friday]', () => {
+		it('creates with astroTime=SolarNoon, shift=-240, weekdays=[Monday, Wednesday, Friday]', () => {
 			const have = new AstroTriggerBuilder()
 				.setId('8')
 				.setAction(actionMock)
 				.setAstroTime(AstroTime.SolarNoon)
-				.setShift(-120)
+				.setShift(-240)
 				.setWeekdays([Weekday.Monday, Weekday.Wednesday, Weekday.Friday])
 				.build();
 			expect(have.getId()).to.equal('8');
 			expect(have.getAction()).to.equal(actionMock);
 			expect(have.getAstroTime()).to.equal(AstroTime.SolarNoon);
-			expect(have.getShiftInMinutes()).to.equal(-120);
+			expect(have.getShiftInMinutes()).to.equal(-240);
 			expect(have.getWeekdays()).to.deep.equal([Weekday.Monday, Weekday.Wednesday, Weekday.Friday]);
 		});
 	});
 
 	describe('constants', () => {
 		it('MAX_SHIFT is 200', () => {
-			expect(AstroTrigger.MAX_SHIFT).to.equal(120);
+			expect(AstroTrigger.MAX_SHIFT).to.equal(240);
 		});
 	});
 });
